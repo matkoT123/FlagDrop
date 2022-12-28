@@ -1,49 +1,34 @@
 {
-    "todos": [
+    "question": "Choose correct flag to match: ",
+    "countriesEurope": [
         {
-            "id": 1,
-            "name": "Take out garbage.",
-            "date": "2022-11-01"
+            "countryName": "France",
+            "correctFlag": "flags/france.jpg"
         },
         {
-            "id": 2,
-            "name": "Make dinner.",
-            "date": "2022-11-02"
+            "countryName": "Germany",
+            "correctFlag": "flags/germany.jpg"
         },
         {
-            "id": 3,
-            "name": "Clean windows.",
-            "date": "2022-10-10"
+            "countryName": "Norway",
+            "correctFlag": "flags/norway.jpg"
         },
         {
-            "id": 4,
-            "name": "Yell at neighbor.",
-            "date": "2022-11-11"
+            "countryName": "Sweden",
+            "correctFlag": "flags/sweden.jpg"
         },
         {
-            "id": 5,
-            "name": "Take a nap.",
-            "date": "2022-12-24"
-        },
+            "countryName": "Denmark",
+            "correctFlag": "flags/denmark.jpg"
+        }
+    ],
+    "flags": [
         {
-            "id": 6,
-            "name": "Do homework.",
-            "date": "2022-10-15"
-        },
-        {
-            "id": 7,
-            "name": "Write a WEBTE1 exam.",
-            "date": "2022-12-01"
-        },
-        {
-            "id": 8,
-            "name": "Pass an OS final exam.",
-            "date": "2023-01-16"
-        },
-        {
-            "id": 9,
-            "name": "Find a job.",
-            "date": "2023-01-17"
+            "option1": "flags/france.jpg",
+            "option2": "flags/germany.jpg",
+            "option3": "flags/norway.jpg",
+            "option4": "flags/sweden.jpg",
+            "option5": "flags/denmark.jpg"
         }
     ]
 }
