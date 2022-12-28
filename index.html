@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0,
+          maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script rel="script" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Flag Game</title>
 </head>
 <body>
-
+    <div class="modal" id="modal">
+        <h3>Choose Difficulty</h3>
+        <div class="buttonDiv">
+            <button class="button-35" type="button">Easy</button>
+        </div>
+        <div class="buttonDiv">
+            <button class="button-35" type="button">Hard</button>
+        </div>
+    </div>
+    <section>
+        <div class="menu" id="menu">
+            <div class="gameTitle">
+                <h3>Flags Drop</h3>
+            </div>
+            <div class="buttonDiv">
+                <button class="button-35" type="button" onclick="openModal()">Start Game</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
