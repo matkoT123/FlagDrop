@@ -22,13 +22,11 @@
             "correctFlag": "flags/denmark.jpg"
         }
     ],
-    "flags": [
-        {
+    "flags": {
             "option1": "flags/france.jpg",
             "option2": "flags/germany.jpg",
             "option3": "flags/norway.jpg",
             "option4": "flags/sweden.jpg",
             "option5": "flags/denmark.jpg"
         }
-    ]
 }

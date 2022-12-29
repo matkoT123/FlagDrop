@@ -7,30 +7,66 @@
           maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20160511/json2.js"
+            integrity="sha512-h3RrO+eudpiPUYFkwORXD2ppuy9jOXQ+MzVEIo7k+OuA7y9Ze5jsQ5WN/ZSgI+ZSIngT6pDSaqpgmnam2HPe1g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script rel="script" src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <title>Flag Game</title>
 </head>
 <body>
-    <div class="modal" id="modal">
+    <div class="modalGame" id="modalGame"></div>
+
+    <div class="modalDifficulty" id="modalDifficulty">
         <h3>Choose Difficulty</h3>
         <div class="buttonDiv">
-            <button class="button-35" type="button">Easy</button>
+            <button class="button-35" type="button" onclick="startGameEasy()">Easy</button>
         </div>
         <div class="buttonDiv">
-            <button class="button-35" type="button">Hard</button>
+            <button class="button-35" type="button" onclick="startGameHard()">Hard</button>
+        </div>
+        <div class="buttonDiv">
+            <button class="button-35" type="button" onclick="goBack()">Go Back</button>
         </div>
     </div>
-    <section>
-        <div class="menu" id="menu">
-            <div class="gameTitle">
-                <h3>Flags Drop</h3>
-            </div>
-            <div class="buttonDiv">
-                <button class="button-35" type="button" onclick="openModal()">Start Game</button>
-            </div>
+
+    <div class="modalRules" id="modalRules">
+        <h3>Rules</h3>
+        <div class="buttonDiv">
+            <button class="button-35" type="button" onclick="goBack()">Go Back</button>
         </div>
-    </section>
+    </div>
+
+    <div class="modalAuthors" id="modalAuthors">
+        <h3>Authors</h3>
+        <div class="buttonDiv">
+            <button class="button-35" type="button" onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+
+    <div class="menu" id="menu">
+        <div class="gameTitle">
+            <h3>Flags Drop</h3>
+        </div>
+        <div class="buttonDiv">
+            <button class="button-35" type="button" onclick="openModalDifficulty()">Start Game</button>
+        </div>
+        <div class="buttonDiv">
+            <button class="button-35" type="button" onclick="openModalRules()">Rules</button>
+        </div>
+        <div class="buttonDiv">
+            <button class="button-35" type="button" onclick="openModalAuthors()">Authors</button>
+        </div>
+        <div class="buttonDiv">
+            <button class="button-35" type="button" onclick="">Exit</button>
+        </div>
+    </div>
+
 </body>
 </html>

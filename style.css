@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Lucida Sans";
+    font-family: shadows into light, serif;
 }
 
 body::before {
@@ -16,79 +18,133 @@ body::before {
     z-index: -1;
 }
 
-section{
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-}
-
 h3{
-    font-size: 50px;
+    font-size: 4rem;
 }
 
-.modal{
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.element{
+
+}
+
+.menu{
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 40%;
     transform: translate(-50%, -50%);
 
     text-align: center;
-    background-color: orange;
+    width: 350px;
+
+    background-color: #b29994;
+    border-radius: 10px;
+    border: 2px solid #326c7e;
+    box-shadow: 0 0 15px 15px #326c7e;
+
+}
+
+.modalDifficulty{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+
+    text-align: center;
+    background-color: #b29994;
     border-radius: 10px;
     border: 2px solid #326c7e;
     box-shadow: 0 0 15px 15px #326c7e;
 
     z-index: 5;
-    visibility: hidden;
 }
 
-.menu{
-    text-align: center;
+.modalRules{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
 
-    background-color: orange;
+
+
+    text-align: center;
+    background-color: #b29994;
     border-radius: 10px;
     border: 2px solid #326c7e;
     box-shadow: 0 0 15px 15px #326c7e;
 
+    z-index: 10;
+}
+
+.modalAuthors{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+
+
+    text-align: center;
+    background-color: #b29994;
+    border-radius: 10px;
+    border: 2px solid #326c7e;
+    box-shadow: 0 0 15px 15px #326c7e;
+
+    z-index: 15;
+}
+
+.modalGame{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    height: 40%;
+    background-color: #b29994;
+
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gameTitle{
-    margin: 10px;
+    margin: 20px;
 }
 
 .buttonDiv{
-    margin: 10px;
+    margin: 25px;
 }
 
 .button-35 {
     align-items: center;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
-    box-sizing: border-box;
-    color: #121212;
-    cursor: pointer;
-    display: inline-flex;
-    flex: 1 1 auto;
-    font-family: Inter,sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    justify-content: center;
-    line-height: 1;
-    margin: 0;
+    width: 180px;
+    height: 70px;
+    font-size: 2rem;
+    border-radius: 10px;
     outline: none;
-    padding: 1rem 1.2rem;
-    text-align: center;
-    text-decoration: none;
-    transition: box-shadow .2s,-webkit-box-shadow .2s;
-    white-space: nowrap;
-    border: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    border: none;
 }
 
 .button-35:hover {
-    box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+    box-shadow: 0 0 15px 15px #326c7e;
 }
