@@ -1,0 +1,32 @@
+
+<!-- Make sure to load this example with a mobile dev tool. Dragging will not work with mouse event-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Drag and Drop Demo</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/854f879857.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="content">
+
+        <section class="flag-container" id="flagContainer">
+            <img draggable="true" class="flags" src="Argentina.png" id="argentina" alt="Argentina">
+            <img draggable="true" class="flags" src="Britania.png" id="britania" alt="Britania">
+            <img draggable="true" class="flags" src="India.png" id="india" alt="India">
+          </section>
+
+          <section class="nameOfStatesContainer">
+            <div id="argentinaDrop" class="nameOfStates" data-draggable-id="argentina">
+              <span id="span">Argentína</span>
+            </div>
+          </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
