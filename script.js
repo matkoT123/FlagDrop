@@ -32,14 +32,14 @@ function startGameHard(){
     </div>
     <div class="row">
         <div class="column">
-            <div class="element">
+            <div>
                 tu bude krajina co treba uhadnut
             </div>
-            <div class="element">
+            <div>
                 tu bude counter na chyby
             </div>
         </div>
-        <div class="column">
+        <div>
             tu bude drop container
         </div>
     </div>
