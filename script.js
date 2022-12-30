@@ -22,6 +22,8 @@ function openModalAuthors(){
 
 function startGameEasy(){
     document.getElementById("modalDifficulty").style.visibility = "hidden";
+    document.getElementById("modalGame").style.visibility = "visible";
+
 }
 
 function startGameHard(){

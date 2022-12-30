@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
+@font-face {
+    font-family: KGRedHands;
+    src: url("font/ShadowsIntoLight-Regular.ttf");
+}
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: shadows into light, serif;
+    font-family: ShadowsIntoLight-Regular, serif;
 }
 
 body::before {
@@ -33,10 +36,6 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.element{
-
 }
 
 .menu{
@@ -118,7 +117,11 @@ h3{
 
     width: 80%;
     height: 40%;
+
     background-color: #b29994;
+    border-radius: 10px;
+    border: 2px solid #326c7e;
+    box-shadow: 0 0 15px 15px #326c7e;
 
     z-index: 20;
 
