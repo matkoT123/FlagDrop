@@ -1,0 +1,32 @@
+{
+    "question": "Choose correct flag to match: ",
+    "countriesEurope": [
+        {
+            "countryName": "France",
+            "correctFlag": "flags/france.jpg"
+        },
+        {
+            "countryName": "Germany",
+            "correctFlag": "flags/germany.jpg"
+        },
+        {
+            "countryName": "Norway",
+            "correctFlag": "flags/norway.jpg"
+        },
+        {
+            "countryName": "Sweden",
+            "correctFlag": "flags/sweden.jpg"
+        },
+        {
+            "countryName": "Denmark",
+            "correctFlag": "flags/denmark.jpg"
+        }
+    ],
+    "flags": {
+            "option1": "flags/france.jpg",
+            "option2": "flags/germany.jpg",
+            "option3": "flags/norway.jpg",
+            "option4": "flags/sweden.jpg",
+            "option5": "flags/denmark.jpg"
+        }
+}

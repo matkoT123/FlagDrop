@@ -1,0 +1,238 @@
+@font-face {
+    font-family: KGRedHands;
+    src: url("font/ShadowsIntoLight-Regular.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: ShadowsIntoLight-Regular, serif;
+}
+
+body::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url("backgroundImage.jpg");
+    background-size: cover;
+    position: fixed;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+h3{
+    font-size: 4rem;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    width: 350px;
+
+    background-color: #b29994;
+    border-radius: 10px;
+    border: 2px solid #326c7e;
+    box-shadow: 0 0 15px 15px #326c7e;
+
+}
+
+.modalDifficulty{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+
+    text-align: center;
+    background-color: #b29994;
+    border-radius: 10px;
+    border: 2px solid #326c7e;
+    box-shadow: 0 0 15px 15px #326c7e;
+
+    z-index: 5;
+}
+
+.modalRules{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+
+
+    text-align: center;
+    background-color: #b29994;
+    border-radius: 10px;
+    border: 2px solid #326c7e;
+    box-shadow: 0 0 15px 15px #326c7e;
+
+    z-index: 10;
+}
+
+.modalAuthors{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+
+
+    text-align: center;
+    background-color: #b29994;
+    border-radius: 10px;
+    border: 2px solid #326c7e;
+    box-shadow: 0 0 15px 15px #326c7e;
+
+    z-index: 15;
+}
+
+.modalGame{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    /* height: 40%; */
+
+    background-color: #b29994;
+    border-radius: 10px;
+    border: 2px solid #326c7e;
+    box-shadow: 0 0 15px 15px #326c7e;
+
+    z-index: 20;
+
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        margin-top: 10%;
+}
+
+.gameTitle{
+    margin: 20px;
+}
+
+.buttonDiv{
+    margin: 25px;
+}
+
+.button-35 {
+    align-items: center;
+    width: 180px;
+    height: 70px;
+    font-size: 2rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.button-35:hover {
+    box-shadow: 0 0 15px 15px #326c7e;
+}
+
+/*KERNEL GAME CSS */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #eee;
+  color: #111;
+}
+
+.content {
+  margin: 10%;
+}
+
+.flag-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.flags {
+  height: 6.5rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  margin: 0rem 0.5rem;
+  cursor: move;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.flags:hover {
+  opacity: 1;
+}
+
+.nameOfStatesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.nameOfStates {
+  height: 7.2rem;
+  width: 10.5rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: #fff;
+  border: 3px dashed #111;
+}
+
+.nameOfStates span {
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+.scoreContainterClass {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.scoreBoxClass {
+  font-size: 2rem;
+  pointer-events: none;
+}
+
+.scoreClass {
+  font-weight: 700;
+  font-size: 2.3rem;
+}
