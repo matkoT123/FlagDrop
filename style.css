@@ -1,13 +1,13 @@
-@font-face {
-    font-family: KGRedHands;
-    src: url("font/ShadowsIntoLight-Regular.ttf");
-}
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: ShadowsIntoLight-Regular, serif;
+    font-family: ShadowsIntoLight-Regular;
+}
+
+@font-face {
+    font-family: ShadowsIntoLight-Regular;
+    src: url("font/ShadowsIntoLight-Regular.ttf");
 }
 
 body::before {

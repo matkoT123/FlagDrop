@@ -1,4 +1,5 @@
 function goBack(){
+    document.getElementById("modalGame").style.visibility = "hidden";
     document.getElementById("modalDifficulty").style.visibility = "hidden";
     document.getElementById("modalRules").style.visibility = "hidden";
     document.getElementById("modalAuthors").style.visibility = "hidden";
@@ -25,25 +26,47 @@ function startGameEasy(){
 
     document.getElementById("modalGame").innerHTML = `
     <div class="content">
+    
+    <h4 id="question"></h4>
+    
+    <section class="nameOfStatesContainer">
+      <div id="argentinaDrop" class="nameOfStates" data-draggable-id="argentina">
+        <span id="span">Argentína</span>
+      </div>
+    </section>
+    
     <section class="flag-container" id="flagContainer">
       <img draggable="true" class="flags" src="India.png" id="india" alt="India">
       <img draggable="true" class="flags" src="Argentina.png" id="argentina" alt="Argentina">
       <img draggable="true" class="flags" src="Britania.png" id="britania" alt="Britania">
     </section>
 
-    <section class="nameOfStatesContainer">
-      <div id="argentinaDrop" class="nameOfStates" data-draggable-id="argentina">
-        <span id="span">Argentína</span>
-      </div>
-    </section>
-
     <section id="scoreContainter" class="scoreContainterClass">
       <div id="scoreBox" class="scoreBoxClass">
-        CHYBY <span id="score" class="scoreClass">0</span>
+        MISTAKES: <span id="score" class="scoreClass">0</span>
       </div>
+    </section>
+    <section id="controlButtons" class="controlButtons">
+        <div class="row">
+            <div class="buttonDiv">
+                <button class="button-35" type="button" onclick="goBack()">Go Back</button>
+            </div>
+            <div class="buttonDiv">
+                <button class="button-35" type="button" onclick="">Next</button>
+            </div>
+        </div>
     </section>
   </div>
     `;
+    $.ajax({
+        type: "GET",
+        url: "data.json",
+        dataType: "json",
+
+        success: function (data) {
+            document.getElementById("question").innerHTML = data.questionFlags;
+        }
+    });
     gameLogic();
     document.getElementById("modalGame").style.visibility = "visible";
     

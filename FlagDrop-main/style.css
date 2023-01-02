@@ -25,6 +25,12 @@ h3{
     font-size: 4rem;
 }
 
+h4{
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+}
+
 .row{
     display: flex;
     flex-direction: row;
@@ -41,11 +47,12 @@ h3{
 .menu{
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
 
     text-align: center;
-    width: 350px;
+    width: 80%;
+    max-width: 350px;
 
     background-color: #b29994;
     border-radius: 10px;
@@ -58,10 +65,11 @@ h3{
     visibility: hidden;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 50%;
     transform: translate(-50%, -50%);
 
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
 
     text-align: center;
     background-color: #b29994;
@@ -76,7 +84,7 @@ h3{
     visibility: hidden;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 50%;
     transform: translate(-50%, -50%);
 
 
@@ -94,7 +102,7 @@ h3{
     visibility: hidden;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 50%;
     transform: translate(-50%, -50%);
 
 
@@ -112,11 +120,11 @@ h3{
     visibility: hidden;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 50%;
     transform: translate(-50%, -50%);
 
     width: 80%;
-    /* height: 40%; */
+    max-width: 550px;
 
     background-color: #b29994;
     border-radius: 10px;
@@ -124,14 +132,9 @@ h3{
     box-shadow: 0 0 15px 15px #326c7e;
 
     z-index: 20;
-
-        /* display: flex;
-        flex-direction: column;
-        align-items: center; */
-        margin-top: 10%;
 }
 
-.gameTitle{
+.modalTitle{
     margin: 20px;
 }
 
@@ -169,7 +172,7 @@ body {
 }
 
 .content {
-  margin: 10%;
+  margin: 20px;
 }
 
 .flag-container {
@@ -235,4 +238,30 @@ body {
 .scoreClass {
   font-weight: 700;
   font-size: 2.3rem;
+}
+
+@media screen and (max-width: 426px){
+
+    /* BUTTONS/HEADINGS */
+    .buttonDiv{
+        margin: 15px 3px 15px 3px;
+    }
+    .button-35 {
+        font-size: 1.5rem;
+        width: 130px;
+        height: 50px;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    .modalTitle{
+        margin: 15px;
+    }
+    .content{
+        margin: 0;
+        margin-top: 20px;
+    }
+    .row{
+        justify-content: space-between;
+    }
 }

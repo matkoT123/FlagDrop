@@ -1,5 +1,6 @@
 {
-    "question": "Choose correct flag to match: ",
+    "questionFlags": "Choose correct flag to match: ",
+    "questionShapes": "Choose correct shape to match: ",
     "countriesEurope": [
         {
             "countryName": "France",
