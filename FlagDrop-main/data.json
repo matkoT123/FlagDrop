@@ -25,7 +25,7 @@
         {
             "id": "usa",
             "title": "Usa",
-            "path": "./flags/USA.png"
+            "path": "./flags/Usa.png"
         },
         {
             "id": "australia",
@@ -113,7 +113,7 @@
         {
             "id": "usa",
             "title": "Usa",
-            "path": "./shapes/USA.png"
+            "path": "./shapes/Usa.png"
         },
         {
             "id": "australia",
