@@ -46,14 +46,14 @@ let flagTaken = [];
     
     <section class="nameOfStatesContainer">
       <div id="argentinaDrop" class="nameOfStates" data-draggable-id="argentina">
-        <span id="span">Argentína</span>
+        <span id="span"></span>
       </div>
     </section>
     
     <section class="flag-container" id="flagContainer">
-      <img draggable="true" class="flags" src="India.png" id="india" alt="India">
-      <img draggable="true" class="flags" src="Argentina.png" id="argentina" alt="Argentina">
-      <img draggable="true" class="flags" src="Britania.png" id="britania" alt="Britania">
+      <img draggable="true" class="flags" src="" id="" alt="">
+      <img draggable="true" class="flags" src="" id="" alt="">
+      <img draggable="true" class="flags" src="" id="" alt="">
     </section>
 
     <section id="scoreContainter" class="scoreContainterClass">
@@ -108,23 +108,25 @@ let flagTaken = [];
 let mistakesHard = 0;
 
 function startGameHard(){
-  if(countOfroundEasy < 5) {
+  if(canGoNext) {
     document.getElementById("modalDifficulty").style.visibility = "hidden";
-  document.getElementById("modalGame").innerHTML = `
+
+    if (countOfroundEasy < 5) {
+      document.getElementById("modalGame").innerHTML = `
   <div class="content">
   
   <h4 id="question"></h4>
   
   <section class="nameOfStatesContainer">
     <div id="argentinaDrop" class="nameOfStates" data-draggable-id="argentina">
-      <span id="span">Argentína</span>
+      <span id="span"></span>
     </div>
   </section>
   
   <section class="flag-container" id="flagContainer">
-    <img draggable="true" class="flags" src="India.png" id="india" alt="India">
-    <img draggable="true" class="flags" src="Argentina.png" id="argentina" alt="Argentina">
-    <img draggable="true" class="flags" src="Britania.png" id="britania" alt="Britania">
+    <img draggable="true" class="flags" src="" id="" alt="">
+    <img draggable="true" class="flags" src="" id="" alt="">
+    <img draggable="true" class="flags" src="" id="" alt="">
   </section>
 
   <section id="scoreContainter" class="scoreContainterClass">
@@ -144,10 +146,10 @@ function startGameHard(){
   </section>
 </div>
   `;
-  gameLogic('hard');
-  document.getElementById("modalGame").style.visibility = "visible";
-  } else {
-    document.getElementById("modalGame").innerHTML = `
+      gameLogic('hard');
+      document.getElementById("modalGame").style.visibility = "visible";
+    } else {
+      document.getElementById("modalGame").innerHTML = `
     <div class="content">
     
     <h4 id="wholeMistakes"></h4>
@@ -166,9 +168,10 @@ function startGameHard(){
     
   </div>
     `;
-    document.getElementById("wholeMistakes").innerHTML = "Mistakes in this game: " + mistakesEasy;
-    countOfroundEasy = 0;
-    mistakesEasy = 0;
+      document.getElementById("wholeMistakes").innerHTML = "Mistakes in this game: " + mistakesEasy;
+      countOfroundEasy = 0;
+      mistakesEasy = 0;
+    }
   }
   
 }
@@ -191,7 +194,7 @@ function gameLogic(difficulty) {
     return response.json();
   }).then(data => {
 
-    if(difficulty == "easy") {
+    if(difficulty === "easy") {
       document.getElementById("question").innerHTML = data.questionFlags;
   
     for (var k of images) {
@@ -218,7 +221,7 @@ function gameLogic(difficulty) {
     }
     }
 
-    if(difficulty == "hard") {
+    if(difficulty === "hard") {
       document.getElementById("question").innerHTML = data.questionShapes;
   
     for (var k of images) {
@@ -245,7 +248,7 @@ function gameLogic(difficulty) {
     }
     }
 
-  let generateIndex = Math.floor((Math.random() * 3));;
+  let generateIndex = Math.floor((Math.random() * 3));
   dropFlagTo.setAttribute("data-draggable-id", arrayImages[generateIndex].id);
   nameOfState.innerHTML = arrayImages[generateIndex].alt;
   
