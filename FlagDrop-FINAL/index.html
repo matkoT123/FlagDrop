@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0,
+          content="width=device-width, user-scalable=no, initial-scale=1.0,
           maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -20,19 +20,19 @@
 
     <title>Flags Drop</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-
-
-    <link rel="manifest" href="FlagDrop-main/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>
 
 </head>
 <body>
     <div class="modalGame" id="modalGame"></div>
 
     <div class="modalDifficulty" id="modalDifficulty">
-        <h3>Choose Difficulty</h3>
+        <div class="modalTitle">
+            <h3>Choose Difficulty</h3>
+        </div>
         <div class="buttonDiv">
             <button class="button-35" type="button" onclick="startGameEasy()">Easy</button>
         </div>
@@ -45,21 +45,28 @@
     </div>
 
     <div class="modalRules" id="modalRules">
-        <h3>Rules</h3>
+        <div class="modalTitle">
+            <h3>Rules</h3>
+        </div>
+        <article><b>EASY</b> - Drag flag that matches country stated in dashed box to dashed box. Every time you start dragging incorrect flag, mistake will be counted.</article>
+        <article><b>HARD</b> - Drag country shape that matches country stated in dashed box to dashed box. Every time you start dragging incorrect shape, mistake will be counted.</article>
         <div class="buttonDiv">
             <button class="button-35" type="button" onclick="goBack()">Go Back</button>
         </div>
     </div>
 
     <div class="modalAuthors" id="modalAuthors">
-        <h3>Authors</h3>
+        <div class="modalTitle">
+            <h3>Authors</h3>
+        </div>
+        <article>Made by <b>Martin Tremko</b> & <b>Juraj Cajka</b></article>
         <div class="buttonDiv">
             <button class="button-35" type="button" onclick="goBack()">Go Back</button>
         </div>
     </div>
 
     <div class="menu" id="menu">
-        <div class="gameTitle">
+        <div class="modalTitle">
             <h3>Flags Drop</h3>
         </div>
         <div class="buttonDiv">
@@ -72,13 +79,17 @@
             <button class="button-35" type="button" onclick="openModalAuthors()">Authors</button>
         </div>
         <div class="buttonDiv">
-            <button class="button-35" type="button" onclick="">Exit</button>
+            <button class="button-35" type="button" onclick="self.close()">Exit</button>
         </div>
     </div>
 
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js');
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(reg => console.log('Service Worker: Registered'))
+                    .catch(err => console.log(`Service Worker: Error: ${err}`));
+            });
         }
     </script>
 
